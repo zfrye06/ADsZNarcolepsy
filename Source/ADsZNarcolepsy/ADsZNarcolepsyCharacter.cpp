@@ -27,8 +27,8 @@ AADsZNarcolepsyCharacter::AADsZNarcolepsyCharacter()
 	bUseControllerRotationRoll = false;
 
 	// Configure character movement
-	GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
+	//GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
+	//GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
 	GetCharacterMovement()->JumpZVelocity = 600.f;
 	GetCharacterMovement()->AirControl = 0.2f;
 
@@ -54,11 +54,11 @@ void AADsZNarcolepsyCharacter::SetupPlayerInputComponent(class UInputComponent* 
 {
 	// Set up gameplay key bindings
 	check(PlayerInputComponent);
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	//PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
+	//PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
-	PlayerInputComponent->BindAxis("MoveForward", this, &AADsZNarcolepsyCharacter::MoveForward);
-	PlayerInputComponent->BindAxis("MoveRight", this, &AADsZNarcolepsyCharacter::MoveRight);
+	//PlayerInputComponent->BindAxis("MoveForward", this, &AADsZNarcolepsyCharacter::MoveForward);
+	//PlayerInputComponent->BindAxis("MoveRight", this, &AADsZNarcolepsyCharacter::MoveRight);
 
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
@@ -69,11 +69,11 @@ void AADsZNarcolepsyCharacter::SetupPlayerInputComponent(class UInputComponent* 
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AADsZNarcolepsyCharacter::LookUpAtRate);
 
 	// handle touch devices
-	PlayerInputComponent->BindTouch(IE_Pressed, this, &AADsZNarcolepsyCharacter::TouchStarted);
-	PlayerInputComponent->BindTouch(IE_Released, this, &AADsZNarcolepsyCharacter::TouchStopped);
+	//PlayerInputComponent->BindTouch(IE_Pressed, this, &AADsZNarcolepsyCharacter::TouchStarted);
+	//PlayerInputComponent->BindTouch(IE_Released, this, &AADsZNarcolepsyCharacter::TouchStopped);
 
 	// VR headset functionality
-	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AADsZNarcolepsyCharacter::OnResetVR);
+	//PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AADsZNarcolepsyCharacter::OnResetVR);*/
 }
 
 
